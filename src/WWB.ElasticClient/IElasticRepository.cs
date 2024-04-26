@@ -1,54 +1,18 @@
 ﻿using Elastic.Clients.Elasticsearch;
+using Elastic.Clients.Elasticsearch.QueryDsl;
 
 namespace WWB.ElasticClient
 {
-    public interface IElasticRepository
+    public interface IElasticRepository<TEntity> where TEntity : BaseElasticEntity
     {
-        /// <summary>
-        /// 添加索引文档
-        /// </summary>
-        /// <typeparam name="TDocument">文档对象泛型</typeparam>
-        /// <param name="document">文档对象</param>
-        /// <param name="index">索引名称</param>
-        /// <returns></returns>
-        Task<IndexResponse> IndexAsync<TDocument>(TDocument document, IndexName index, CancellationToken cancellationToken = default(CancellationToken));
+        Task<GetResponse<TEntity>> GetAsync(string id);
 
-        /// <summary>
-        /// 获取文档
-        /// </summary>
-        /// <typeparam name="TDocument">文档对象</typeparam>
-        /// <param name="id">文档id</param>
-        /// <param name="action"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        Task<GetResponse<TDocument>> GetAsync<TDocument>(Id id, Action<GetRequestDescriptor<TDocument>> action, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IndexResponse> IndexAsync(TEntity document);
 
-        /// <summary>
-        /// 搜索文档
-        /// </summary>
-        /// <typeparam name="TDocument"></typeparam>
-        /// <param name="action"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        Task<SearchResponse<TDocument>> SearchAsync<TDocument>(Action<SearchRequestDescriptor<TDocument>> action, CancellationToken cancellationToken = default(CancellationToken));
+        Task<UpdateResponse<TEntity>> UpdateAsync(TEntity document);
 
-        /// <summary>
-        /// 更新索引
-        /// </summary>
-        /// <typeparam name="TDocument"></typeparam>
-        /// <typeparam name="TPartialDocument"></typeparam>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        Task<UpdateResponse<TDocument>> UpdateAsync<TDocument, TPartialDocument>(IndexName index, Id id, Action<UpdateRequestDescriptor<TDocument, TPartialDocument>> configureRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<DeleteResponse> DeleteAsync(Id id);
 
-        /// <summary>
-        /// 删除索引
-        /// </summary>
-        /// <param name="index"></param>
-        /// <param name="id"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        Task<DeleteResponse> DeleteAsync<TDocument>(IndexName index, Id id, CancellationToken cancellationToken = default(CancellationToken));
+        Task<SearchResponse<TEntity>> SearchAsync<TEntity>(int from, int size, Query query, List<SortOptions> sorts);
     }
 }

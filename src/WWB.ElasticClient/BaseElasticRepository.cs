@@ -3,7 +3,7 @@ using Elastic.Clients.Elasticsearch.QueryDsl;
 
 namespace WWB.ElasticClient
 {
-    public class BaseElasticRepository<TEntity> where TEntity : BaseElasticEntity
+    public abstract class BaseElasticRepository<TEntity> : IElasticRepository<TEntity> where TEntity : BaseElasticEntity
     {
         protected readonly ElasticsearchClient Client;
         protected readonly ElasticOptions Options;
