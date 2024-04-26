@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <PackageId>WWB.ElasticClient</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>my6521</Authors>
+    <Description>WWB基础类库</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/my6521/wwb-common</RepositoryUrl>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.22" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.22" />
+      <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.22" />
+    <PackageReference Include="Elastic.Clients.Elasticsearch" Version="8.13.10" />
+  </ItemGroup>
+
+</Project>

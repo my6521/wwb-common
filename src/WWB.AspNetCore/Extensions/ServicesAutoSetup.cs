@@ -5,7 +5,7 @@ using WWB.Common.DI;
 
 namespace WWB.AspNetCore.Extensions
 {
-    public static class DISetup
+    public static class ServicesAutoSetup
     {
         public static IServiceCollection AddServicesFromAllAssembly(this IServiceCollection services)
         {
