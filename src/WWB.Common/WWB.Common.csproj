@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+      <PackageId>WWB.Common</PackageId>
+      <Version>1.0.0</Version>
+      <Authors>my6521</Authors>
+      <Description>WWB基础类库</Description>
+      <PackageLicenseExpression>MIT</PackageLicenseExpression>
+      <RepositoryUrl>https://github.com/my6521/wwb-common</RepositoryUrl>
+      <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+      <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspectCore.Core" Version="2.4.0" />
+    <PackageReference Include="CSRedisCore" Version="3.8.803" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+      <PackageReference Include="System.Drawing.Common" Version="4.5.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.14" />
+      <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.27.0" />
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.27.0" />
+  </ItemGroup>
+
+</Project>

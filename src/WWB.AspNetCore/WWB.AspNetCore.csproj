@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+      <PackageId>WWB.AspNetCore</PackageId>
+      <Version>1.0.0</Version>
+      <Authors>my6521</Authors>
+      <Description>WWB基础类库</Description>
+      <PackageLicenseExpression>MIT</PackageLicenseExpression>
+      <RepositoryUrl>https://github.com/my6521/wwb-common</RepositoryUrl>
+      <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+      <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="6.4.0" />
+        <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
+        <PackageReference Include="Hangfire.AspNetCore" Version="1.8.12" />
+        <PackageReference Include="Hangfire.Dashboard.BasicAuthorization" Version="1.0.2" />
+        <PackageReference Include="HangFire.Redis.StackExchange" Version="1.9.3" />
+        <PackageReference Include="Scrutor" Version="4.2.2" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+        <PackageReference Include="SmartSql.DIExtension" Version="4.1.67" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\WWB.Common\WWB.Common.csproj" />
+    </ItemGroup>
+</Project>
