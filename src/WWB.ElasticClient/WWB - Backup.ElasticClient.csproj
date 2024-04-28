@@ -12,7 +12,6 @@
     <RepositoryUrl>https://github.com/my6521/wwb-common</RepositoryUrl>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>WWB.ElasticClient.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

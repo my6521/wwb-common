@@ -2,6 +2,9 @@
 
 namespace WWB.Common.Extensions
 {
+    /// <summary>
+    /// 字符串扩展类
+    /// </summary>
     public static class StringExtensions
     {
         public static int ToInt(this string obj)

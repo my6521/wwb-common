@@ -2,6 +2,9 @@
 
 namespace WWB.Common.Json
 {
+    /// <summary>
+    /// 距离格式化
+    /// </summary>
     public class DistanceFormatConverter : JsonConverter
     {
         /// <summary>

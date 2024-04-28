@@ -2,6 +2,9 @@
 
 namespace WWB.Common.Extensions
 {
+    /// <summary>
+    /// claims扩展类
+    /// </summary>
     public static class ClaimsIdentityExtensions
     {
         public static Claim FindClaim(this ClaimsPrincipal principal, string claimType)

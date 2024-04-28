@@ -9,6 +9,8 @@
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	  <RepositoryUrl>https://github.com/my6521/wwb-oss</RepositoryUrl>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+      <GenerateDocumentationFile>True</GenerateDocumentationFile>
+      <DocumentationFile>WWB.OSS.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

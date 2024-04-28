@@ -13,7 +13,6 @@ namespace WWB.ElasticClient
             services.AddSingleton<ElasticsearchClient>(sp =>
             {
                 var settings = new ElasticsearchClientSettings(new Uri(options.Url));
-                //settings.CertificateFingerprint("<FINGERPRINT>");
                 settings.Authentication(new BasicAuthentication(options.UserName, options.Password));
 
                 return new ElasticsearchClient(settings);

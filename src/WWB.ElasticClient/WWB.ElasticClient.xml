@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WWB.ElasticClient</name>
+    </assembly>
+    <members>
+        <member name="T:WWB.ElasticClient.BaseElasticEntity">
+            <summary>
+            elastic基础实体类
+            </summary>
+        </member>
+        <member name="T:WWB.ElasticClient.BaseElasticRepository`1">
+            <summary>
+            Elastic仓库抽象类
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="P:WWB.ElasticClient.BaseElasticRepository`1.Client">
+            <summary>
+            ElasticClient客户端
+            </summary>
+        </member>
+        <member name="P:WWB.ElasticClient.BaseElasticRepository`1.Options">
+            <summary>
+            配置
+            </summary>
+        </member>
+        <member name="P:WWB.ElasticClient.BaseElasticRepository`1.IndexName">
+            <summary>
+            索引名
+            </summary>
+        </member>
+        <member name="M:WWB.ElasticClient.BaseElasticRepository`1.#ctor(Elastic.Clients.Elasticsearch.ElasticsearchClient,WWB.ElasticClient.ElasticOptions)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="client"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:WWB.ElasticClient.BaseElasticRepository`1.GetAsync(System.String)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.ElasticClient.BaseElasticRepository`1.IndexAsync(`0)">
+            <summary>
+            插入实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.ElasticClient.BaseElasticRepository`1.UpdateAsync(`0)">
+            <summary>
+            更新实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.ElasticClient.BaseElasticRepository`1.DeleteAsync(Elastic.Clients.Elasticsearch.Id)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.ElasticClient.BaseElasticRepository`1.SearchAsync``1(System.Int32,System.Int32,Elastic.Clients.Elasticsearch.QueryDsl.Query,System.Collections.Generic.List{Elastic.Clients.Elasticsearch.SortOptions})">
+            <summary>
+            检索实体
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="from"></param>
+            <param name="size"></param>
+            <param name="query"></param>
+            <param name="sorts"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WWB.ElasticClient.IElasticRepository`1">
+            <summary>
+            Elastci仓储
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:WWB.ElasticClient.IElasticRepository`1.GetAsync(System.String)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.ElasticClient.IElasticRepository`1.IndexAsync(`0)">
+            <summary>
+            插入实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.ElasticClient.IElasticRepository`1.UpdateAsync(`0)">
+            <summary>
+            更新实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.ElasticClient.IElasticRepository`1.DeleteAsync(Elastic.Clients.Elasticsearch.Id)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.ElasticClient.IElasticRepository`1.SearchAsync``1(System.Int32,System.Int32,Elastic.Clients.Elasticsearch.QueryDsl.Query,System.Collections.Generic.List{Elastic.Clients.Elasticsearch.SortOptions})">
+            <summary>
+            检索实体
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="from"></param>
+            <param name="size"></param>
+            <param name="query"></param>
+            <param name="sorts"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

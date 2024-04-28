@@ -1,0 +1,569 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WWB.Common</name>
+    </assembly>
+    <members>
+        <member name="T:WWB.Common.Attributes.RedisLockAttribute">
+            <summary>
+            分布式锁
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Attributes.RedisLockAttribute.Name">
+            <summary>
+            锁名称
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Attributes.RedisLockAttribute.TimeoutSeconds">
+            <summary>
+            超时时间
+            </summary>
+        </member>
+        <member name="M:WWB.Common.Attributes.RedisLockAttribute.Invoke(AspectCore.DynamicProxy.AspectContext,AspectCore.DynamicProxy.AspectDelegate)">
+            <summary>
+            Invoke
+            </summary>
+            <param name="context"></param>
+            <param name="next"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="P:WWB.Common.Dtos.ApiPageRequest.PageIndex">
+            <summary>
+            当前页数
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Dtos.ApiPageRequest.PageSize">
+            <summary>
+            每页显示调试
+            </summary>
+        </member>
+        <member name="T:WWB.Common.Extensions.ClaimsIdentityExtensions">
+            <summary>
+            claims扩展类
+            </summary>
+        </member>
+        <member name="T:WWB.Common.Extensions.DateExtensions">
+            <summary>
+            日期扩展类
+            </summary>
+        </member>
+        <member name="M:WWB.Common.Extensions.EncryptExtensions.ToMd5(System.String,System.Boolean)">
+            <summary>
+            MD5
+            </summary>
+            <param name="txt"></param>
+            <param name="lowerCase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.Common.Extensions.EnumExtensions.GetDescription(System.Enum)">
+            <summary>
+            获取枚举描述
+            </summary>
+            <param name="errorCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WWB.Common.Extensions.SerializerExtensions">
+            <summary>
+            json序列化扩展类
+            </summary>
+        </member>
+        <member name="M:WWB.Common.Extensions.SerializerExtensions.ToJson(System.Object)">
+             <summary>
+            
+             </summary>
+             <param name="obj"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WWB.Common.Extensions.SerializerExtensions.ToObject``1(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="val"></param>
+             <typeparam name="T"></typeparam>
+             <returns></returns>
+        </member>
+        <member name="T:WWB.Common.Extensions.StringExtensions">
+            <summary>
+            字符串扩展类
+            </summary>
+        </member>
+        <member name="M:WWB.Common.Extensions.StringExtensions.MaskMobile(System.String)">
+            <summary>
+            手机号掩码
+            </summary>
+            <param name="mobile"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:WWB.Common.Extensions.StringExtensions.MaskIDNumber(System.String)">
+            <summary>
+            身份证号掩码
+            </summary>
+            <param name="idNumber"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="T:WWB.Common.FriendlyException">
+            <summary>
+            友好异常
+            </summary>
+        </member>
+        <member name="M:WWB.Common.Helpers.ByteHelper.ByteToInt(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            将字节数组转换成int类型
+            </summary>
+            <param name="buff"></param>
+            <param name="start"></param>
+            <param name="len"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.Common.Helpers.ByteHelper.IntToByte(System.Int32,System.Int32)">
+            <summary>
+            int类型转字节数组
+            </summary>
+            <param name="vel"></param>
+            <param name="len"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.Common.Helpers.ByteHelper.ByteToHex(System.Byte[])">
+            <summary>
+            字节数组转hex
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.Common.Helpers.DistanceHelper.CalculateDistance(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            计算两点距离
+            </summary>
+            <param name="lat1"></param>
+            <param name="lng1"></param>
+            <param name="lat2"></param>
+            <param name="lng2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.Common.Helpers.ImageCompressHelper.CompressImage(System.IO.Stream,System.Int32,System.Int32)">
+            <summary>
+            无损压缩图片
+            </summary>
+            <param name="srcFileStream"></param>
+            <param name="flag">压缩质量（数字越小压缩率越高）1-100</param>
+            <param name="size">压缩后图片的最大大小</param>
+            <returns></returns>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.IdGeneratorOptions.Method">
+            <summary>
+            雪花计算方法
+            （1-漂移算法|2-传统算法），默认1
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.IdGeneratorOptions.BaseTime">
+            <summary>
+            基础时间（UTC格式）
+            不能超过当前系统时间
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.IdGeneratorOptions.WorkerId">
+            <summary>
+            机器码
+            必须由外部设定，最大值 2^WorkerIdBitLength-1
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.IdGeneratorOptions.WorkerIdBitLength">
+            <summary>
+            机器码位长
+            默认值6，取值范围 [1, 15]（要求：序列数位长+机器码位长不超过22）
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.IdGeneratorOptions.SeqBitLength">
+            <summary>
+            序列数位长
+            默认值6，取值范围 [3, 21]（要求：序列数位长+机器码位长不超过22）
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.IdGeneratorOptions.MaxSeqNumber">
+            <summary>
+            最大序列数（含）
+            设置范围 [MinSeqNumber, 2^SeqBitLength-1]，默认值0，表示最大序列数取最大值（2^SeqBitLength-1]）
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.IdGeneratorOptions.MinSeqNumber">
+            <summary>
+            最小序列数（含）
+            默认值5，取值范围 [5, MaxSeqNumber]，每毫秒的前5个序列数对应编号0-4是保留位，其中1-4是时间回拨相应预留位，0是手工新值预留位
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.IdGeneratorOptions.TopOverCostCount">
+            <summary>
+            最大漂移次数（含），
+            默认2000，推荐范围500-10000（与计算能力有关）
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.IdGeneratorOptions.DataCenterId">
+            <summary>
+            数据中心ID（默认0）
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.IdGeneratorOptions.DataCenterIdBitLength">
+            <summary>
+            数据中心ID长度（默认0）
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.IdGeneratorOptions.TimestampType">
+            <summary>
+            时间戳类型（0-毫秒，1-秒），默认0
+            </summary>
+        </member>
+        <member name="M:WWB.Common.IdGenerator.IIdGenerator.NewLong">
+            <summary>
+            生成新的long型Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WWB.Common.IdGenerator.OverCostActionArg">
+            <summary>
+            Id生成时回调参数
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.OverCostActionArg.ActionType">
+            <summary>
+            事件类型
+            1-开始，2-结束，8-漂移
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.OverCostActionArg.TimeTick">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.OverCostActionArg.WorkerId">
+            <summary>
+            机器码
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.OverCostActionArg.OverCostCountInOneTerm">
+            <summary>
+            漂移计算次数
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.OverCostActionArg.GenCountInOneTerm">
+            <summary>
+            漂移期间生产ID个数
+            </summary>
+        </member>
+        <member name="P:WWB.Common.IdGenerator.OverCostActionArg.TermIndex">
+            <summary>
+            漂移周期
+            </summary>
+        </member>
+        <member name="T:WWB.Common.IdGenerator.SnowWorkerM1">
+            <summary>
+            雪花漂移算法
+            </summary>
+        </member>
+        <member name="F:WWB.Common.IdGenerator.SnowWorkerM1.BaseTime">
+            <summary>
+            基础时间
+            </summary>
+        </member>
+        <member name="F:WWB.Common.IdGenerator.SnowWorkerM1.WorkerId">
+            <summary>
+            机器码
+            </summary>
+        </member>
+        <member name="F:WWB.Common.IdGenerator.SnowWorkerM1.WorkerIdBitLength">
+            <summary>
+            机器码位长
+            </summary>
+        </member>
+        <member name="F:WWB.Common.IdGenerator.SnowWorkerM1.SeqBitLength">
+            <summary>
+            自增序列数位长
+            </summary>
+        </member>
+        <member name="F:WWB.Common.IdGenerator.SnowWorkerM1.MaxSeqNumber">
+            <summary>
+            最大序列数（含）
+            </summary>
+        </member>
+        <member name="F:WWB.Common.IdGenerator.SnowWorkerM1.MinSeqNumber">
+            <summary>
+            最小序列数（含）
+            </summary>
+        </member>
+        <member name="F:WWB.Common.IdGenerator.SnowWorkerM1.TopOverCostCount">
+            <summary>
+            最大漂移次数（含）
+            </summary>
+        </member>
+        <member name="T:WWB.Common.IdGenerator.SnowWorkerM2">
+            <summary>
+            常规雪花算法
+            </summary>
+        </member>
+        <member name="T:WWB.Common.IdGenerator.SnowWorkerM3">
+            <summary>
+            雪花漂移算法（支持数据中心ID和秒级时间戳）
+            </summary>
+        </member>
+        <member name="F:WWB.Common.IdGenerator.SnowWorkerM3.DataCenterId">
+            <summary>
+            数据中心ID（默认0）
+            </summary>
+        </member>
+        <member name="F:WWB.Common.IdGenerator.SnowWorkerM3.DataCenterIdBitLength">
+            <summary>
+            数据中心ID长度（默认0）
+            </summary>
+        </member>
+        <member name="F:WWB.Common.IdGenerator.SnowWorkerM3.TimestampType">
+            <summary>
+            时间戳类型（0-毫秒，1-秒），默认0
+            </summary>
+        </member>
+        <member name="T:WWB.Common.IdGenerator.DefaultIdGenerator">
+            <summary>
+            默认实现
+            </summary>
+        </member>
+        <member name="T:WWB.Common.IdGenerator.IdHelper">
+            <summary>
+            这是一个调用的例子，默认情况下，单机集成者可以直接使用 NextId()。
+            </summary>
+        </member>
+        <member name="M:WWB.Common.IdGenerator.IdHelper.SetIdGenerator(WWB.Common.IdGenerator.IdGeneratorOptions)">
+            <summary>
+            设置参数，建议程序初始化时执行一次
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:WWB.Common.IdGenerator.IdHelper.NextId">
+            <summary>
+            生成新的Id
+            调用本方法前，请确保调用了 SetIdGenerator 方法做初始化。
+            否则将会初始化一个WorkerId为1的对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WWB.Common.Json.DateFormatConverter">
+            <summary>
+            日期格式化
+            </summary>
+        </member>
+        <member name="T:WWB.Common.Json.DecimalFormatConverter">
+            <summary>
+            小数格式化
+            </summary>
+        </member>
+        <member name="T:WWB.Common.Json.DistanceFormatConverter">
+            <summary>
+            距离格式化
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Json.DistanceFormatConverter.CanRead">
+            <summary>
+            是否开启自定义反序列化，值为true时，反序列化时会走ReadJson方法，值为false时，不走ReadJson方法，而是默认的反序列化
+            </summary>
+        </member>
+        <member name="M:WWB.Common.Json.DistanceFormatConverter.CanConvert(System.Type)">
+            <summary>
+            是否开启自定义序列化，值为true时，序列化时会走WriteJson方法，值为false时，不走WriteJson方法，而是默认的序列化
+            类型等于long时才转换
+            </summary>
+            <param name="objectType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WWB.Common.Json.IDNumberMaskFormatConverter">
+            <summary>
+            身份证掩码格式化
+            </summary>
+        </member>
+        <member name="T:WWB.Common.Json.LongToStringConverter">
+            <summary>
+            long格式化
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Json.LongToStringConverter.CanRead">
+            <summary>
+            是否开启自定义反序列化，值为true时，反序列化时会走ReadJson方法，值为false时，不走ReadJson方法，而是默认的反序列化
+            </summary>
+        </member>
+        <member name="M:WWB.Common.Json.LongToStringConverter.CanConvert(System.Type)">
+            <summary>
+            是否开启自定义序列化，值为true时，序列化时会走WriteJson方法，值为false时，不走WriteJson方法，而是默认的序列化
+            类型等于long时才转换
+            </summary>
+            <param name="objectType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WWB.Common.Json.MobileMaskFormatConverter">
+            <summary>
+            手机号掩码格式化
+            </summary>
+        </member>
+        <member name="T:WWB.Common.Jwt.ClaimsConst">
+            <summary>
+            常量
+            </summary>
+        </member>
+        <member name="T:WWB.Common.Jwt.ClaimsIdentityExtensions">
+            <summary>
+            claims扩展类
+            </summary>
+        </member>
+        <member name="M:WWB.Common.Jwt.ClaimsIdentityExtensions.GetUserId(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            获取账号标识
+            </summary>
+            <param name="principal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.Common.Jwt.ClaimsIdentityExtensions.IsSupperAdmin(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            是否超级会员
+            </summary>
+            <param name="principal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.Common.Jwt.ClaimsIdentityExtensions.GetClient(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            获取客户端
+            </summary>
+            <param name="principal"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WWB.Common.Jwt.ClientConfig">
+            <summary>
+            jwt客户端配置
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Jwt.ClientConfig.ClientId">
+            <summary>
+            客户端id
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Jwt.ClientConfig.ClientSecret">
+            <summary>
+            密钥
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Jwt.ClientConfig.Issuer">
+            <summary>
+            发行方
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Jwt.ClientConfig.AccessTokenLifetime">
+            <summary>
+            有效时间，单位分钟
+            </summary>
+        </member>
+        <member name="T:WWB.Common.Jwt.IJwtService">
+            <summary>
+            JWT服务类
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Jwt.IJwtService.Client">
+            <summary>
+            客户端标识
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Jwt.IJwtService.IsSupperAdmin">
+            <summary>
+            是否超级管理员
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Jwt.IJwtService.AccountId">
+            <summary>
+            账号标识
+            </summary>
+        </member>
+        <member name="M:WWB.Common.Jwt.IJwtService.FindClaim(System.String)">
+            <summary>
+            获取cliaim
+            </summary>
+            <param name="claimType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.Common.Jwt.IJwtService.CreateToken(System.String,WWB.Common.Jwt.ClientConfig,System.Security.Claims.ClaimsIdentity)">
+            <summary>
+            生成token
+            </summary>
+            <param name="accountId">账号标识</param>
+            <param name="client">jwt配置</param>
+            <param name="identity">身份标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.Common.Jwt.IJwtService.ValidateRefreshToken(System.String,WWB.Common.Jwt.ClientConfig,System.Security.Claims.ClaimsPrincipal@)">
+            <summary>
+            验证refresh token
+            </summary>
+            <param name="refreshToken">RefreshToken</param>
+            <param name="client">jwt配置</param>
+            <param name="claimsPrincipal">身份标识</param>
+            <returns></returns>
+        </member>
+        <member name="T:WWB.Common.Jwt.TokenResult">
+            <summary>
+            token实体类
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Jwt.TokenResult.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Jwt.TokenResult.RefreshToken">
+            <summary>
+            RefreshToken
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Jwt.TokenResult.Expire">
+            <summary>
+            有效期
+            </summary>
+        </member>
+        <member name="T:WWB.Common.Websockets.DefaultWebsocketMsgHandler">
+            <summary>
+            WebSocket消息处理
+            </summary>
+        </member>
+        <member name="M:WWB.Common.Websockets.DefaultWebsocketMsgHandler.ReceiveMsg(System.String,System.String)">
+            <summary>
+            收到消息处理
+            </summary>
+            <param name="fromClientId"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.Common.Websockets.DefaultWebsocketMsgHandler.SendMsg(System.String,System.String)">
+            <summary>
+            发送消息
+            </summary>
+            <param name="toClientId"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WWB.Common.Websockets.WebSocketClient">
+            <summary>
+            websocket客户端类
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Websockets.WebSocketClient.ClientId">
+            <summary>
+            客户端标识
+            </summary>
+        </member>
+        <member name="P:WWB.Common.Websockets.WebSocketClient.WebSocket">
+            <summary>
+            WebSocket
+            </summary>
+        </member>
+        <member name="T:WWB.Common.Websockets.WebSocketClientCollection">
+            <summary>
+            WebSocket客户端管理
+            </summary>
+        </member>
+    </members>
+</doc>

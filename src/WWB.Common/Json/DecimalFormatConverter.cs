@@ -2,6 +2,9 @@
 
 namespace WWB.Common.Json
 {
+    /// <summary>
+    /// 小数格式化
+    /// </summary>
     public class DecimalFormatConverter : JsonConverter
     {
         private readonly string _format;

@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DB75BAB6-517
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{8ADE1205-A883-454E-9F45-9BF63DDC4E47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WWB.Sample.API", "samples\WWB.Sample.API\WWB.Sample.API.csproj", "{1B9FA4B9-F88B-4104-8C42-C9A51EBF5BE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WWB.Sample.API", "samples\WWB.Sample.API\WWB.Sample.API.csproj", "{1B9FA4B9-F88B-4104-8C42-C9A51EBF5BE4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OSS", "OSS", "{6CFDC360-7928-425E-ABA9-D953298A6CF2}"
 EndProject
@@ -39,7 +39,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WWB.SMS.Tencent", "src\SMS\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WWB.SMS.Yunxin", "src\SMS\WWB.SMS.Yunxin\WWB.SMS.Yunxin.csproj", "{25CAB86D-6B1C-48DA-A173-CCF9F88AD10E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WWB.ElasticClient", "src\WWB.ElasticClient\WWB.ElasticClient.csproj", "{CFD09360-F90B-4C39-ABF7-AB3E44DB8464}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WWB.ElasticClient", "src\WWB.ElasticClient\WWB.ElasticClient.csproj", "{CFD09360-F90B-4C39-ABF7-AB3E44DB8464}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{FD454477-93FA-4F31-943B-74DF435E64A4}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

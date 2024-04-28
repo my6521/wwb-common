@@ -1,5 +1,8 @@
 ﻿namespace WWB.Common.Extensions
 {
+    /// <summary>
+    /// 日期扩展类
+    /// </summary>
     public static class DateExtensions
     {
         public static long ToUnixTime(this DateTime dateTime)

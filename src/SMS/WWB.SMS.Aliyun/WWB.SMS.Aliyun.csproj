@@ -9,6 +9,8 @@
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	  <RepositoryUrl>https://github.com/my6521/wwb-sms</RepositoryUrl>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+      <GenerateDocumentationFile>True</GenerateDocumentationFile>
+      <DocumentationFile>WWB.SMS.Aliyun.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

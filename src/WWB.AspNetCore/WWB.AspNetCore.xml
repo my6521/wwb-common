@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WWB.AspNetCore</name>
+    </assembly>
+    <members>
+        <member name="M:WWB.AspNetCore.Filters.ModelStateExtensions.GetValidationSummary(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary,System.String)">
+            <summary>
+            获取验证消息提示并格式化提示
+            </summary>
+        </member>
+        <member name="M:WWB.AspNetCore.Middleware.WebSocketHandlerMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+             <summary>
+            
+             </summary>
+             <param name="context"></param>
+             <param name="next"></param>
+             <returns></returns>
+        </member>
+    </members>
+</doc>

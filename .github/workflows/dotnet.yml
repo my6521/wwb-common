@@ -31,5 +31,20 @@ jobs:
       run: |
         nuget push ./src/WWB.Common/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
         nuget push ./src/WWB.Common/bin/Release/*.nupkg -Source github -SkipDuplicate
+
         nuget push ./src/WWB.AspNetCore/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
         nuget push ./src/WWB.AspNetCore/bin/Release/*.nupkg -Source github -SkipDuplicate
+
+        nuget push ./src/WWB.ElasticClient/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
+        nuget push ./src/WWB.ElasticClient/bin/Release/*.nupkg -Source github -SkipDuplicate
+
+        nuget push ./src/WWB.OSS/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
+        nuget push ./src/WWB.OSS/bin/Release/*.nupkg -Source github -SkipDuplicate
+        nuget push ./src/WWB.OSS.Aliyun/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
+        nuget push ./src/WWB.OSS.Aliyun/bin/Release/*.nupkg -Source github -SkipDuplicate
+        
+        nuget push ./src/WWB.SMS/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
+        nuget push ./src/WWB.SMS/bin/Release/*.nupkg -Source github -SkipDuplicate
+        nuget push ./src/WWB.SMS.Aliyun/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
+        nuget push ./src/WWB.SMS.Aliyun/bin/Release/*.nupkg -Source github -SkipDuplicate
+

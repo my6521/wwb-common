@@ -2,6 +2,9 @@
 
 namespace WWB.Common.Jwt
 {
+    /// <summary>
+    /// 常量
+    /// </summary>
     public class ClaimsConst
     {
         public const string UserId = ClaimTypes.NameIdentifier;

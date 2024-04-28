@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WWB.OSS</name>
+    </assembly>
+    <members>
+        <member name="M:WWB.OSS.IOSSService.BucketExistsAsync(System.String)">
+            <summary>
+            检查存储桶是否存在。
+            </summary>
+            <param name="bucketName">存储桶名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.CreateBucketAsync(System.String)">
+            <summary>
+            创建一个存储桶。
+            </summary>
+            <param name="bucketName">存储桶名称。</param>
+            <param name="location">可选参数。默认是us-east-1。</param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.RemoveBucketAsync(System.String)">
+            <summary>
+            删除一个存储桶
+            </summary>
+            <param name="bucketName">存储桶名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.ListBucketsAsync">
+            <summary>
+            列出所有的存储桶。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.SetBucketAclAsync(System.String,WWB.OSS.Models.AccessMode)">
+            <summary>
+            设置储存桶的访问权限
+            </summary>
+            <param name="bucketName"></param>
+            <param name="objectName"></param>
+            <param name="mode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.GetBucketAclAsync(System.String)">
+            <summary>
+            获取储存桶的访问权限
+            </summary>
+            <param name="bucketName"></param>
+            <param name="objectName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.ObjectsExistsAsync(System.String,System.String)">
+            <summary>
+            判断桶中对象是否存在
+            </summary>
+            <param name="bucketName">存储桶名称。</param>
+            <param name="objectName">存储桶里的对象名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.ListObjectsAsync(System.String,System.String)">
+            <summary>
+            列出存储桶里的对象。
+            </summary>
+            <param name="bucketName">存储桶名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.GetObjectAsync(System.String,System.String,System.Action{System.IO.Stream},System.Threading.CancellationToken)">
+            <summary>
+            返回对象数据的流。
+            </summary>
+            <param name="bucketName">存储桶名称。</param>
+            <param name="objectName">存储桶里的对象名称。</param>
+            <param name="callback">处理流的回调函数。</param>
+            <param name="cancellationToken">可选参数。默认是default(CancellationToken)</param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.GetObjectAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            下载并将文件保存到本地文件系统。
+            </summary>
+            <param name="bucketName">存储桶名称。</param>
+            <param name="objectName">存储桶里的对象名称。</param>
+            <param name="fileName">本地文件路径。</param>
+            <param name="cancellationToken">可选参数。默认是default(CancellationToken)</param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.PutObjectAsync(System.String,System.String,System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            通过Stream上传对象。
+            </summary>
+            <param name="bucketName">存储桶名称。</param>
+            <param name="objectName">存储桶里的对象名称。</param>
+            <param name="data">要上传的Stream对象。</param>
+            <param name="cancellationToken">可选参数。默认是default(CancellationToken)</param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.PutObjectAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            通过文件上传到对象中。
+            </summary>
+            <param name="bucketName">存储桶名称。</param>
+            <param name="objectName">存储桶里的对象名称。</param>
+            <param name="filePath">要上传的本地文件名。</param>
+            <param name="cancellationToken">可选参数。默认是default(CancellationToken) </param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.GetObjectMetadataAsync(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            获取对象的元数据。
+            </summary>
+            <param name="bucketName">存储桶名称。</param>
+            <param name="objectName">存储桶里的对象名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.CopyObjectAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            从objectName指定的对象中将数据拷贝到destObjectName指定的对象。
+            </summary>
+            <param name="bucketName">源存储桶名称。</param>
+            <param name="objectName">源存储桶中的源对象名称。</param>
+            <param name="destBucketName">目标存储桶名称。</param>
+            <param name="destObjectName">要创建的目标对象名称,如果为空，默认为源对象名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.RemoveObjectAsync(System.String,System.String)">
+            <summary>
+            删除一个对象。
+            </summary>
+            <param name="bucketName">存储桶名称。</param>
+            <param name="objectName">存储桶里的对象名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.RemoveObjectAsync(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            删除多个对象
+            </summary>
+            <param name="bucketName"></param>
+            <param name="objectNames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.SetObjectAclAsync(System.String,System.String,WWB.OSS.Models.AccessMode)">
+            <summary>
+            设置文件的访问权限
+            </summary>
+            <param name="bucketName"></param>
+            <param name="objectName"></param>
+            <param name="mode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.GetObjectAclAsync(System.String,System.String)">
+            <summary>
+            获取文件的访问权限
+            </summary>
+            <param name="bucketName"></param>
+            <param name="objectName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.RemoveObjectAclAsync(System.String,System.String)">
+            <summary>
+            清空object的ACL，使对象ACL继承存储桶的设置
+            </summary>
+            <param name="bucketName"></param>
+            <param name="objectName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.IOSSService.PresignedGetObjectAsync(System.String,System.String,System.Int32)">
+            <summary>
+            生成一个给HTTP GET请求用的presigned URL。浏览器/移动端的客户端可以用这个URL进行下载，即使其所在的存储桶是私有的。这个presigned URL可以设置一个失效时间，默认值是7天。
+            </summary>
+            <param name="bucketName">存储桶名称。</param>
+            <param name="objectName">存储桶里的对象名称。</param>
+            <param name="expiresInt">失效时间（以秒为单位），默认是7天，不得大于七天。</param>
+            <returns></returns>
+        </member>
+        <member name="P:WWB.OSS.OSSOptions.Provider">
+            <summary>
+            枚举，OOS提供商
+            </summary>
+        </member>
+        <member name="P:WWB.OSS.OSSOptions.Endpoint">
+            <summary>
+            节点
+            </summary>
+            <remarks>
+            腾讯云中表示AppId
+            </remarks>
+        </member>
+        <member name="P:WWB.OSS.OSSOptions.AccessKey">
+            <summary>
+            AccessKey
+            </summary>
+        </member>
+        <member name="P:WWB.OSS.OSSOptions.SecretKey">
+            <summary>
+            SecretKey
+            </summary>
+        </member>
+        <member name="P:WWB.OSS.OSSOptions.Region">
+            <summary>
+            地域
+            </summary>
+        </member>
+        <member name="P:WWB.OSS.OSSOptions.IsEnableHttps">
+            <summary>
+            是否启用HTTPS
+            </summary>
+        </member>
+    </members>
+</doc>

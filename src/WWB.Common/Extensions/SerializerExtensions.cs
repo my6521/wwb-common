@@ -2,6 +2,9 @@
 
 namespace WWB.Common.Extensions
 {
+    /// <summary>
+    /// json序列化扩展类
+    /// </summary>
     public static class SerializerExtensions
     {
         /// <summary>

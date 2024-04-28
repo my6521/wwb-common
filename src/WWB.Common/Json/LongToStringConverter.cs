@@ -2,6 +2,9 @@
 
 namespace WWB.Common.Json
 {
+    /// <summary>
+    /// long格式化
+    /// </summary>
     public class LongToStringConverter : JsonConverter
     {
         /// <summary>

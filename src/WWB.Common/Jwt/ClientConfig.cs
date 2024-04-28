@@ -1,5 +1,8 @@
 ﻿namespace WWB.Common.Jwt
 {
+    /// <summary>
+    /// jwt客户端配置
+    /// </summary>
     public class ClientConfig
     {
         /// <summary>

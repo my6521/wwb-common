@@ -1,5 +1,8 @@
 ﻿namespace WWB.Common.Websockets
 {
+    /// <summary>
+    /// WebSocket客户端管理
+    /// </summary>
     public class WebSocketClientCollection
     {
         private static List<WebSocketClient> _client = new List<WebSocketClient>();

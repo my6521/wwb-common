@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WWB.OSS.Aliyun</name>
+    </assembly>
+    <members>
+        <member name="M:WWB.OSS.Aliyun.IAliyunOSSService.GetBucketEndpointAsync(System.String)">
+            <summary>
+            获取桶外部访问URL
+            </summary>
+            <param name="bucketName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.Aliyun.IAliyunOSSService.GetBucketLocationAsync(System.String)">
+            <summary>
+            获取储存桶地域
+            </summary>
+            <param name="bucketName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.OSS.Aliyun.IAliyunOSSService.SetBucketCorsRequestAsync(System.String,System.Collections.Generic.List{WWB.OSS.Aliyun.Model.BucketCorsRule})">
+            <summary>
+            管理桶跨域访问
+            </summary>
+            <param name="bucketName"></param>
+            <param name="rules"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

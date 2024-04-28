@@ -12,6 +12,7 @@
       <RepositoryUrl>https://github.com/my6521/wwb-common</RepositoryUrl>
       <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
       <GenerateDocumentationFile>True</GenerateDocumentationFile>
+      <DocumentationFile>WWB.AspNetCore.xml</DocumentationFile>
   </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="6.4.0" />

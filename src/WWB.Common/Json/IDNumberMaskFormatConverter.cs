@@ -3,6 +3,9 @@ using WWB.Common.Extensions;
 
 namespace WWB.Common.Json
 {
+    /// <summary>
+    /// 身份证掩码格式化
+    /// </summary>
     public class IDNumberMaskFormatConverter : JsonConverter
     {
         public override bool CanRead { get; } = false;

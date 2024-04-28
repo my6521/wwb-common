@@ -4,7 +4,7 @@ using WWB.Common.Extensions;
 namespace WWB.Common.Json
 {
     /// <summary>
-    /// 手机号掩码转换
+    /// 手机号掩码格式化
     /// </summary>
     public class MobileMaskFormatConverter : JsonConverter
     {
