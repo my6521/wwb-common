@@ -110,6 +110,53 @@
             友好异常
             </summary>
         </member>
+        <member name="P:WWB.Common.FriendlyException.ErrorCode">
+            <summary>
+            错误编码
+            </summary>
+        </member>
+        <member name="M:WWB.Common.FriendlyException.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="M:WWB.Common.FriendlyException.#ctor(System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="message">错误描述</param>
+        </member>
+        <member name="M:WWB.Common.FriendlyException.#ctor(System.String,System.Exception)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="message">错误描述</param>
+            <param name="innerException">内部异常</param>
+        </member>
+        <member name="M:WWB.Common.FriendlyException.#ctor(System.Int32,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="errorCode">错误编码</param>
+            <param name="message">错误描述</param>
+        </member>
+        <member name="M:WWB.Common.FriendlyException.#ctor(System.Int32,System.String,System.Exception)">
+             <summary>
+            
+             </summary>
+             <param name="errorCode">错误编码</param>
+             <param name="message">错误描述</param>
+             <param name="innerException">内部异常</param>
+        </member>
+        <member name="M:WWB.Common.FriendlyException.Of``1(``0,System.String[])">
+            <summary>
+            格式化异常
+            </summary>
+            <typeparam name="T">错误枚举</typeparam>
+            <param name="errorCode">错误编码</param>
+            <param name="formatTexts">格式化文本</param>
+            <returns></returns>
+        </member>
         <member name="M:WWB.Common.Helpers.ByteHelper.ByteToInt(System.Byte[],System.Int32,System.Int32)">
             <summary>
             将字节数组转换成int类型
@@ -543,6 +590,27 @@
             </summary>
             <param name="toClientId"></param>
             <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WWB.Common.Websockets.IWebsocketMsgHandler">
+            <summary>
+            Websocket消息处理接口
+            </summary>
+        </member>
+        <member name="M:WWB.Common.Websockets.IWebsocketMsgHandler.ReceiveMsg(System.String,System.String)">
+            <summary>
+            接收消息
+            </summary>
+            <param name="fromClientId">客户端标识</param>
+            <param name="msg">消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WWB.Common.Websockets.IWebsocketMsgHandler.SendMsg(System.String,System.String)">
+            <summary>
+            发送消息
+            </summary>
+            <param name="toClientId">客户端标识</param>
+            <param name="msg">发送消息</param>
             <returns></returns>
         </member>
         <member name="T:WWB.Common.Websockets.WebSocketClient">
