@@ -10,9 +10,9 @@ namespace WWB.MqttClient
 {
     public static class MqttClientExtensions
     {
-        public static IServiceCollection AddMqttClient(this IServiceCollection services, Action<MqttOptions> setup)
+        public static IServiceCollection AddMqttClient(this IServiceCollection services, Action<MqttClientOptions> setup)
         {
-            var mqttOptions = new MqttOptions();
+            var mqttOptions = new MqttClientOptions();
             setup?.Invoke(mqttOptions);
             services.AddSingleton(mqttOptions);
 
@@ -41,7 +41,7 @@ namespace WWB.MqttClient
             var managedMqttClient = app.ApplicationServices.GetService<IManagedMqttClient>();
             var managedMqttClientOptions = app.ApplicationServices.GetService<ManagedMqttClientOptions>();
             var messageReceiver = app.ApplicationServices.GetService<IMqttMessageReceiver>();
-            var options = app.ApplicationServices.GetService<MqttOptions>();
+            var options = app.ApplicationServices.GetService<MqttClientOptions>();
 
             managedMqttClient.ConnectedAsync += e =>
             {
