@@ -1,7 +1,6 @@
 ﻿using SmartSql;
-using WWB.Administrator.Domain.Repository;
 
-namespace WWB.Administrator.Application.Abstracts
+namespace WWB.Common.Abstracts
 {
     public abstract class BaseServiceInt32<TEntity> : BaseService<TEntity, int> where TEntity : class
     {

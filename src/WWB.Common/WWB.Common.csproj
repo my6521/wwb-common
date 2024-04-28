@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <PackageId>WWB.Common</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>my6521</Authors>
     <Description>WWB基础类库</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -24,6 +24,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.14" />
     <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.27.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.27.0" />
+      <PackageReference Include="SmartSql.DyRepository" Version="4.1.67" />
+      <PackageReference Include="SmartSql.AOP" Version="4.1.67" />
   </ItemGroup>
 
   <ItemGroup>

@@ -11,4 +11,7 @@
         <PackageReference Include="SmartSql.AOP" Version="4.1.67" />
         <PackageReference Include="Mapster" Version="7.4.0" />
     </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Entity\" />
+    </ItemGroup>
 </Project>

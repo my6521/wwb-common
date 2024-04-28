@@ -1,6 +1,4 @@
-﻿using WWB.Administrator.Domain.Repository;
-
-namespace WWB.Administrator.Application.Abstracts
+﻿namespace WWB.Common.Abstracts
 {
     public interface IBaseServiceInt32<TEntity> : IBaseRepository<TEntity, int> where TEntity : class
     {

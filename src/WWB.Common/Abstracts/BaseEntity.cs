@@ -1,4 +1,4 @@
-﻿namespace WWB.Administrator.Domain.Entity
+﻿namespace WWB.Common.Abstracts
 {
     public class BaseEntity<TKey>
     {
