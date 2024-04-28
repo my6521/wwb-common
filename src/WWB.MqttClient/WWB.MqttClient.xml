@@ -4,5 +4,56 @@
         <name>WWB.MqttClient</name>
     </assembly>
     <members>
+        <member name="T:WWB.MqttClient.IMqttMessagePublisher">
+            <summary>
+            发布消息接口
+            </summary>
+        </member>
+        <member name="M:WWB.MqttClient.IMqttMessagePublisher.Publish(System.String,System.Object,MQTTnet.Protocol.MqttQualityOfServiceLevel)">
+            <summary>
+            发布消息
+            </summary>
+            <param name="topic"></param>
+            <param name="data"></param>
+            <param name="qualityOfServiceLevel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WWB.MqttClient.IMqttMessageReceiver">
+            <summary>
+            接收消息接口
+            </summary>
+        </member>
+        <member name="M:WWB.MqttClient.IMqttMessageReceiver.Received(MQTTnet.Client.MqttApplicationMessageReceivedEventArgs)">
+            <summary>
+            接收消息
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WWB.MqttClient.MqttClientOptions">
+            <summary>
+            MQTT客户端配置
+            </summary>
+        </member>
+        <member name="P:WWB.MqttClient.MqttClientOptions.ClientId">
+            <summary>
+            客户端id
+            </summary>
+        </member>
+        <member name="P:WWB.MqttClient.MqttClientOptions.Host">
+            <summary>
+            服务器IP地址
+            </summary>
+        </member>
+        <member name="P:WWB.MqttClient.MqttClientOptions.Port">
+            <summary>
+            服务器端口
+            </summary>
+        </member>
+        <member name="P:WWB.MqttClient.MqttClientOptions.SubscribeTopics">
+            <summary>
+            订阅主题，多个用“,”号分割
+            </summary>
+        </member>
     </members>
 </doc>

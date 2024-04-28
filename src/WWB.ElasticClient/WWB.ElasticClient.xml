@@ -76,6 +76,31 @@
             <param name="sorts"></param>
             <returns></returns>
         </member>
+        <member name="T:WWB.ElasticClient.ElasticOptions">
+            <summary>
+            Elastc配置
+            </summary>
+        </member>
+        <member name="P:WWB.ElasticClient.ElasticOptions.Url">
+            <summary>
+            服务器地址
+            </summary>
+        </member>
+        <member name="P:WWB.ElasticClient.ElasticOptions.Prefix">
+            <summary>
+            索引前缀
+            </summary>
+        </member>
+        <member name="P:WWB.ElasticClient.ElasticOptions.UserName">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:WWB.ElasticClient.ElasticOptions.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
         <member name="T:WWB.ElasticClient.IElasticRepository`1">
             <summary>
             Elastci仓储
