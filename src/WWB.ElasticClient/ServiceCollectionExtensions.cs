@@ -6,7 +6,7 @@ namespace WWB.ElasticClient
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddElasticSearch(this IServiceCollection services, ElasticOptions options)
+        public static IServiceCollection AddElasticClient(this IServiceCollection services, ElasticOptions options)
         {
             services.AddSingleton(options);
 
