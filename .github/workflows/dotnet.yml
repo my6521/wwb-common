@@ -38,13 +38,16 @@ jobs:
         nuget push ./src/WWB.ElasticClient/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
         nuget push ./src/WWB.ElasticClient/bin/Release/*.nupkg -Source github -SkipDuplicate
 
-        nuget push ./src/WWB.OSS/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
-        nuget push ./src/WWB.OSS/bin/Release/*.nupkg -Source github -SkipDuplicate
-        nuget push ./src/WWB.OSS.Aliyun/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
-        nuget push ./src/WWB.OSS.Aliyun/bin/Release/*.nupkg -Source github -SkipDuplicate
+        nuget push ./src/OSS/WWB.OSS/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
+        nuget push ./src/OSS/WWB.OSS/bin/Release/*.nupkg -Source github -SkipDuplicate
+        nuget push ./src/OSS/WWB.OSS.Aliyun/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
+        nuget push ./src/OSS/WWB.OSS.Aliyun/bin/Release/*.nupkg -Source github -SkipDuplicate
         
-        nuget push ./src/WWB.SMS/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
-        nuget push ./src/WWB.SMS/bin/Release/*.nupkg -Source github -SkipDuplicate
-        nuget push ./src/WWB.SMS.Aliyun/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
-        nuget push ./src/WWB.SMS.Aliyun/bin/Release/*.nupkg -Source github -SkipDuplicate
+        nuget push ./src/SMS/WWB.SMS/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
+        nuget push ./src/SMS/WWB.SMS/bin/Release/*.nupkg -Source github -SkipDuplicate
+        nuget push ./src/SMS/WWB.SMS.Aliyun/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
+        nuget push ./src/SMS/WWB.SMS.Aliyun/bin/Release/*.nupkg -Source github -SkipDuplicate
+
+        nuget push ./src/MqttClient/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGETKEY }}
+        nuget push ./src/MqttClient/bin/Release/*.nupkg -Source github -SkipDuplicate
 
