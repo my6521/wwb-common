@@ -450,6 +450,11 @@
             手机号掩码格式化
             </summary>
         </member>
+        <member name="T:WWB.Common.Json.TimeSpanConverter">
+            <summary>
+            时间格式化
+            </summary>
+        </member>
         <member name="T:WWB.Common.Jwt.ClaimsConst">
             <summary>
             常量
